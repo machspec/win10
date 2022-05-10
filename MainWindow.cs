@@ -72,5 +72,10 @@ namespace GUI
         {
             System.Diagnostics.Process.Start("powershell.exe", "-ExecutionPolicy Bypass .\\PSScripts\\winget.ps1");
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
