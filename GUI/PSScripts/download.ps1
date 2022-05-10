@@ -2,9 +2,10 @@
 # Purpose: Designed for future intigration into GUI. May or may not be needed in the future
 # Author: odjacobs
 
-if (-not (Test-Path .\downloads)) {
-    mkdir .\downloads
-}
+#if (-not (Test-Path .\downloads)) {
+#    mkdir .\downloads
+#}
+
 foreach ($param in $args) {
     switch ($param) {
 
