@@ -9,12 +9,10 @@ $bloatware = @(
     "Microsoft.MicrosoftSolitaireCollection"
     "Microsoft.NetworkSpeedTest"
     "Microsoft.News"
-    "Microsoft.XboxApp"
-    "Microsoft.Xbox.TCUI"
-    "Microsoft.XboxGameOverlay"
-    "Microsoft.XboxGameCallableUI"
+    "*Xbox*"
     "Microsoft.XboxSpeechToTextOverlay"
     "Microsoft.MicrosoftOfficeHub"
+    "*skype*"
 
     # Sponsored Bloat
     "*EclipseManager*"
@@ -41,7 +39,6 @@ $bloatware = @(
     "*Hulu*"
     "*HiddenCity*"
     "*AdobePhotoshopExpress*"
-    "*HotspotShieldFreeVPN*"
     "*Disney*"
     "*PicsArt*"
     "*PolarrPhotoEditorAcademicEdition*"
@@ -71,6 +68,9 @@ $bloatware = @(
     "*flaregamesGmbH*"
     "*king.com.*"
     "TheNewYorkTimes.NYTCrossword"
+    "*Lenovo*"
+    "*Hotspot*"
+    "*VPN*"
 )
 
 foreach ($bloat in $bloatware) {
