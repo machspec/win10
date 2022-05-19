@@ -22,9 +22,14 @@ namespace GUI
             this.Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void github_lnklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/machspec/win10");
+            System.Diagnostics.Process.Start("explorer", "https://github.com/machspec/win10");
+        }
+
+        private void author_lbl_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer", "https://github.com/odjacobs");
         }
     }
 }

@@ -32,9 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ok_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.author_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.github_lnklbl = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,14 +68,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Winstallify";
             // 
-            // label2
+            // author_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Owen Jacobs";
+            this.author_lbl.AutoSize = true;
+            this.author_lbl.Location = new System.Drawing.Point(109, 27);
+            this.author_lbl.Name = "author_lbl";
+            this.author_lbl.Size = new System.Drawing.Size(76, 15);
+            this.author_lbl.TabIndex = 3;
+            this.author_lbl.Text = "Owen Jacobs";
+            this.author_lbl.Click += new System.EventHandler(this.author_lbl_Click);
             // 
             // label3
             // 
@@ -83,7 +85,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Version 1.1";
+            this.label3.Text = "Version 1.2";
             // 
             // label4
             // 
@@ -95,14 +97,26 @@
             this.label4.Text = "Winstallify provides a simple interface to install \r\napplications, apply tweaks, " +
     "and debloat windows";
             // 
+            // github_lnklbl
+            // 
+            this.github_lnklbl.AutoSize = true;
+            this.github_lnklbl.Location = new System.Drawing.Point(12, 135);
+            this.github_lnklbl.Name = "github_lnklbl";
+            this.github_lnklbl.Size = new System.Drawing.Size(45, 15);
+            this.github_lnklbl.TabIndex = 6;
+            this.github_lnklbl.TabStop = true;
+            this.github_lnklbl.Text = "GitHub";
+            this.github_lnklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.github_lnklbl_LinkClicked);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 159);
+            this.Controls.Add(this.github_lnklbl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.author_lbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.pictureBox1);
@@ -120,8 +134,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label author_lbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel github_lnklbl;
     }
 }

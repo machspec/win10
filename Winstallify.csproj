@@ -7,8 +7,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <PackageIcon>winstallify_logo.png</PackageIcon>
     <SignAssembly>False</SignAssembly>
-    <AssemblyVersion>1.1</AssemblyVersion>
-    <FileVersion>1.1</FileVersion>
+    <AssemblyVersion>1.2</AssemblyVersion>
+    <FileVersion>1.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,13 +33,6 @@
 
   <ItemGroup>
     <Folder Include="PSScripts\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="\\msi-fs-01\Storage\Development\design\winstallify_logo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

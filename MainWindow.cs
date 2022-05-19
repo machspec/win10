@@ -18,21 +18,7 @@ namespace GUI
         }
 
 
-        private void clear_btn_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < apps_clb.Items.Count; i++)
-            {
-                apps_clb.SetItemChecked(i, false);
-            }
-            
-        }
         
-
-        private void otherAppsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AlternateApps alternateApps = new AlternateApps();
-            alternateApps.ShowDialog();
-        }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,6 +34,40 @@ namespace GUI
             }
             System.Diagnostics.Process.Start("powershell.exe", "-ExecutionPolicy Bypass .\\PSScripts\\download.ps1 " + toInstall);
         }
+        private void clear_btn_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < apps_clb.Items.Count; i++)
+            {
+                apps_clb.SetItemChecked(i, false);
+            }
+
+        }
+
+        private void alt_clear_btn_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < betaApps_clb.Items.Count; i++)
+            {
+                betaApps_clb.SetItemChecked(i, false);
+            }
+            for (int i = 0; i < stress_clb.Items.Count; i++)
+            {
+                stress_clb.SetItemChecked(i, false);
+            }
+        }
+        private void alt_install_btn_Click(object sender, EventArgs e)
+        {
+            String toInstall = "";
+            for (int i = 0; i < betaApps_clb.CheckedItems.Count; i++)
+            {
+                toInstall = toInstall + " " + betaApps_clb.CheckedItems[i].ToString();
+            }
+            for (int i = 0; i < stress_clb.CheckedItems.Count; i++)
+            {
+                toInstall = toInstall + " " + stress_clb.CheckedItems[i].ToString();
+            }
+            System.Diagnostics.Process.Start("powershell.exe", "-ExecutionPolicy Bypass .\\PSScripts\\download.ps1 " + toInstall);
+        }
+
         private void debloat_btn_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("powershell.exe", "-ExecutionPolicy Bypass .\\PSScripts\\debloat.ps1");
