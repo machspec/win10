@@ -17,14 +17,12 @@ namespace GUI
             InitializeComponent();
         }
 
-
-        
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             About about = new About();
             about.ShowDialog();
         }
+
         private void install_btn_Click(object sender, EventArgs e)
         {
             String toInstall = "";
@@ -34,6 +32,7 @@ namespace GUI
             }
             System.Diagnostics.Process.Start("powershell.exe", "-ExecutionPolicy Bypass .\\PSScripts\\download.ps1 " + toInstall);
         }
+
         private void clear_btn_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < apps_clb.Items.Count; i++)
@@ -54,6 +53,7 @@ namespace GUI
                 stress_clb.SetItemChecked(i, false);
             }
         }
+
         private void alt_install_btn_Click(object sender, EventArgs e)
         {
             String toInstall = "";

@@ -24,7 +24,7 @@ namespace GUI
 
         private void github_lnklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer", "https://github.com/machspec/win10");
+            System.Diagnostics.Process.Start("explorer", "https://github.com/odjacobs/win10");
         }
 
         private void author_lbl_Click(object sender, EventArgs e)
